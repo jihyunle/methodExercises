@@ -14,40 +14,52 @@ public class getLetterGrade {
         Scanner input = new Scanner(System.in);
         double percentGrade = input.nextDouble();
         char letterGrade = convertPercentToLetterGrade(percentGrade);
-        System.out.println(percentGrade + "%" + " is a letter grade " + letterGrade);
+        System.out.println(percentGrade + "%" + " is a " + letterGrade);
 
     }
 
     public static char convertPercentToLetterGrade(double percentGrade){
-        char letterGrade ='n';
-        if(percentGrade>89){
-            letterGrade = 'A';
-        }else if (percentGrade>79){
-            letterGrade = 'B';
-        }else if (percentGrade>69){
-            letterGrade = 'C';
-        }else if (percentGrade>59){
-            letterGrade = 'D';
-        }else{
-            letterGrade = 'F';
+        char letterGrade = 'n';
+        int quotient = (int)(percentGrade / 10);
+
+        // Method 1- Switch Statement
+        // Switch statements can pass all primitive data types except Boolean
+        switch(quotient){
+            case 1: letterGrade = 'F';
+                    break;
+            case 2: letterGrade = 'F';
+                break;
+            case 3: letterGrade = 'F';
+                break;
+            case 4: letterGrade = 'F';
+                break;
+            case 5: letterGrade = 'F';
+                break;
+            case 6: letterGrade = 'D';
+                break;
+            case 7: letterGrade = 'C';
+                break;
+            case 8: letterGrade = 'B';
+                break;
+            case 9: letterGrade = 'A';
+                break;
+            case 10: letterGrade = 'A';
+                break;
         }
-//        switch(percentGrade){
-//            case percentGrade>89;
-//                break;
-//            case 2:
-//                letterGrade = 'B';
-//                break;
-//            case 3:
-//                letterGrade = 'C';
-//                break;
-//            case 4:
-//                letterGrade = 'D';
-//                break;
-//            case 5:
-//                letterGrade = 'F';
-//                break;
-//
+
+        // Method 2 - If Statement
+//        if(percentGrade>89){
+//            letterGrade = 'A';
+//        }else if (percentGrade>79){
+//            letterGrade = 'B';
+//        }else if (percentGrade>69){
+//            letterGrade = 'C';
+//        }else if (percentGrade>59){
+//            letterGrade = 'D';
+//        }else{
+//            letterGrade = 'F';
 //        }
+
         return letterGrade;
     }
 }
