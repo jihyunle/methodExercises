@@ -24,26 +24,26 @@ public class getLetterGrade {
 
         // Method 1- Switch Statement
         // Switch statements can pass all primitive data types except Boolean
+        // Statement can't be a conditional. (Can't have boolean after case:)
+
         switch(quotient){
-            case 1: letterGrade = 'F';
-                    break;
-            case 2: letterGrade = 'F';
+            case 1: case 2: case 3: case 4: case 5:
+                letterGrade = 'F';
                 break;
-            case 3: letterGrade = 'F';
+            case 6:
+                letterGrade = 'D';
                 break;
-            case 4: letterGrade = 'F';
+            case 7:
+                letterGrade = 'C';
                 break;
-            case 5: letterGrade = 'F';
+            case 8:
+                letterGrade = 'B';
                 break;
-            case 6: letterGrade = 'D';
+            case 9:
+                letterGrade = 'A';
                 break;
-            case 7: letterGrade = 'C';
-                break;
-            case 8: letterGrade = 'B';
-                break;
-            case 9: letterGrade = 'A';
-                break;
-            case 10: letterGrade = 'A';
+            case 10:
+                letterGrade = 'A';
                 break;
         }
 
